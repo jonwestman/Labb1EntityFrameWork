@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Labb1EntityFrameWork.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Labb1EntityFrameWork.Controllers
 {
