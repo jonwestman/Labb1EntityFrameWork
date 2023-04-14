@@ -15,6 +15,6 @@ namespace Labb1EntityFrameWork.Models
         [StringLength(50)]
         public string LastName { get; set; } = default!;
         [StringLength(50)]
-        public int Email { get; set; }
+        public string? Email { get; set; }
     }
 }
