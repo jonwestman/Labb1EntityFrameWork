@@ -1,3 +1,4 @@
+using Labb1EntityFrameWork.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Labb1EntityFrameWork
@@ -11,7 +12,7 @@ namespace Labb1EntityFrameWork
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddDbContext<PapperAbContext>(options =>
+            builder.Services.AddDbContext<VacationContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
