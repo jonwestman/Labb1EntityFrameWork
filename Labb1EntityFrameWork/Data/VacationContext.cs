@@ -12,11 +12,5 @@ namespace Labb1EntityFrameWork.Data
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Vacation> Vacations { get; set; }
         public DbSet<VacationList> VacationLists { get; set; }
-        //public DbSet<Vacation> MyProperty { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
     }
 }
