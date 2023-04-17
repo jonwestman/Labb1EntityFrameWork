@@ -11,10 +11,10 @@ namespace Labb1EntityFrameWork.Models
         public int VacationId { get; set; }
         [Required]
         [DisplayName("Start date")]
-        public DateOnly StartDate { get; set; }
+        public DateTime StartDate { get; set; }
         [Required]
         [DisplayName("End date")]
-        public DateOnly EndDate { get; set; }
+        public DateTime EndDate { get; set; }
         [Required]
         [DisplayName("Reason for abscence")]
         public string VacayType { get; set; }
