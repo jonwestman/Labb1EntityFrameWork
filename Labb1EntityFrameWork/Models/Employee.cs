@@ -19,5 +19,6 @@ namespace Labb1EntityFrameWork.Models
         public string LastName { get; set; } = default!;
         [StringLength(50)]
         public string? Email { get; set; }
+        public virtual ICollection<VacationList>? VacationLists { get; set; } //navigation
     }
 }

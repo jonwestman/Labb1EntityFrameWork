@@ -19,5 +19,6 @@ namespace Labb1EntityFrameWork.Models
         [DisplayName("Reason for abscence")]
         public string VacayType { get; set; }
         public DateTime DateApplied { get; set; } = DateTime.Now;
+        public virtual ICollection<VacationList>? VacationLists { get; set; } //navigation
     }
 }
