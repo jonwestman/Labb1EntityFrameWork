@@ -25,11 +25,12 @@ namespace Labb1EntityFrameWork.Controllers
 
                                }
                                ).ToListAsync();
-            foreach ( var item in items ) 
+            foreach (var item in items)
             {
                 InfoViewModel listItem = new InfoViewModel();
                 listItem.FirstName = item.FirstName;
                 listItem.LastName = item.LastName;
+                list.Add(listItem);
             }
 
             return View(list);
