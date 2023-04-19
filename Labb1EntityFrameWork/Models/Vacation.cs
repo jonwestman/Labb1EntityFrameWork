@@ -8,13 +8,7 @@ namespace Labb1EntityFrameWork.Models
     {
         [Key]
         [DatabaseGenerated(databaseGeneratedOption: DatabaseGeneratedOption.Identity)]
-        public int VacationId { get; set; }
-        [Required]
-        [DisplayName("Start date")]
-        public DateTime StartDate { get; set; }
-        [Required]
-        [DisplayName("End date")]
-        public DateTime EndDate { get; set; }
+        public int VacationId { get; set; }      
         [Required]
         [DisplayName("Reason for abscence")]
         public string VacayType { get; set; }
