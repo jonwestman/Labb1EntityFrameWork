@@ -56,7 +56,7 @@ namespace Labb1EntityFrameWork.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("VacationId,VacayType,DateApplied")] Vacation vacation)
+        public async Task<IActionResult> Create([Bind("VacationId,VacayType")] Vacation vacation)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace Labb1EntityFrameWork.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("VacationId,VacayType,DateApplied")] Vacation vacation)
+        public async Task<IActionResult> Edit(int id, [Bind("VacationId,VacayType")] Vacation vacation)
         {
             if (id != vacation.VacationId)
             {
