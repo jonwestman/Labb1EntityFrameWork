@@ -21,7 +21,7 @@ namespace Labb1EntityFrameWork.Controllers
                                select new
                                {
                                    FirstName = emp.FirstName,
-                                   LastName = emp.LastName,
+                                   LastName = emp.LastName
 
                                }
                                ).ToListAsync();
