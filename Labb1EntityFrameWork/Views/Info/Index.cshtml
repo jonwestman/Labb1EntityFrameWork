@@ -1,7 +1,32 @@
-﻿@model InfoViewModel
+﻿@model IEnumerable<InfoViewModel>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
 
+<table>
+    <thead>
+        <tr>
+           <th>
+               @Html.DisplayNameFor(model => model.FirstName)
+           </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.LastName)
+                </td>
+            </tr>
+        }       
+    </tbody>
+</table>
