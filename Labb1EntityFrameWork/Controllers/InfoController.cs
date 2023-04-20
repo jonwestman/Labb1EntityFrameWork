@@ -24,7 +24,8 @@ namespace Labb1EntityFrameWork.Controllers
                                    LastName = emp.LastName,
                                    VacayType=va.VacayType,
                                    StartDate=vl.StartDate, 
-                                   EndDate=vl.EndDate
+                                   EndDate=vl.EndDate,
+                                   DateApplied=vl.DateApplied
 
                                }
                                ).ToListAsync();
@@ -33,6 +34,10 @@ namespace Labb1EntityFrameWork.Controllers
                 InfoViewModel listItem = new InfoViewModel();
                 listItem.FirstName = item.FirstName;
                 listItem.LastName = item.LastName;
+                listItem.VacayType = item.VacayType;
+                listItem.StartDate = item.StartDate;
+                listItem.EndDate = item.EndDate; 
+                listItem.DateApplied = item.DateApplied;
                 list.Add(listItem);
             }
 
