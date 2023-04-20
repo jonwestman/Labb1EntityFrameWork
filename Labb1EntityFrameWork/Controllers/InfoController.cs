@@ -21,7 +21,10 @@ namespace Labb1EntityFrameWork.Controllers
                                select new
                                {
                                    FirstName = emp.FirstName,
-                                   LastName = emp.LastName
+                                   LastName = emp.LastName,
+                                   VacayType=va.VacayType,
+                                   StartDate=vl.StartDate, 
+                                   EndDate=vl.EndDate
 
                                }
                                ).ToListAsync();
