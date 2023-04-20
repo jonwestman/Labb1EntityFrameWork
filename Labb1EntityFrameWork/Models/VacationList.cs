@@ -15,6 +15,7 @@ namespace Labb1EntityFrameWork.Models
         [Required]
         [DisplayName("End date")]
         public DateTime EndDate { get; set; }
+        public DateTimeOffset DateApplied { get; set; }
         [ForeignKey(nameof(Employees))]
         public int FK_EmployeeId { get; set; }
         public virtual Employee Employees { get; set; }
