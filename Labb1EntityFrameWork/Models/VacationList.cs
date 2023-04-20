@@ -18,9 +18,11 @@ namespace Labb1EntityFrameWork.Models
         [DisplayName("Date of application")]
         public DateTimeOffset DateApplied { get; set; }
         [ForeignKey(nameof(Employees))]
+        [DisplayName("Employee")]
         public int FK_EmployeeId { get; set; }
         public virtual Employee Employees { get; set; }
         [ForeignKey(nameof(Vacations))]
+        [DisplayName("Reason for abscence")]
         public int FK_VacationId { get; set; }
         public virtual Vacation Vacations { get; set; }
         
