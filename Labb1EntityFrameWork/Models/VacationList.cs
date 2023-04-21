@@ -20,11 +20,11 @@ namespace Labb1EntityFrameWork.Models
         [ForeignKey(nameof(Employees))]
         [DisplayName("Employee")]
         public int FK_EmployeeId { get; set; }
-        public virtual Employee Employees { get; set; }
+        public virtual Employee? Employees { get; set; } = default!;
         [ForeignKey(nameof(Vacations))]
         [DisplayName("Reason for abscence")]
         public int FK_VacationId { get; set; }
-        public virtual Vacation Vacations { get; set; }
-        
-    }
+        public virtual Vacation? Vacations { get; set; } = default!;
+
+	}
 }

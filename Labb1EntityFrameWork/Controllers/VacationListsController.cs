@@ -61,6 +61,11 @@ namespace Labb1EntityFrameWork.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("VacationListId,StartDate,EndDate,DateApplied,FK_EmployeeId,FK_VacationId")] VacationList vacationList)
         {
+            var errors = ModelState
+                .Where(x => x.Value.Errors.Count > 0)
+                .Select(x => new { x.Key, x.Value.Errors })
+                .ToArray();
+
             if (ModelState.IsValid)
             {
                 _context.Add(vacationList);

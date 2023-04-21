@@ -11,7 +11,7 @@ namespace Labb1EntityFrameWork.Models
         public int VacationId { get; set; }      
         [Required]
         [DisplayName("Reason for abscence")]
-        public string VacayType { get; set; }
-        public virtual ICollection<VacationList>? VacationLists { get; set; } //navigation
+        public string VacayType { get; set; } = default!;
+		public virtual ICollection<VacationList>? VacationLists { get; set; } //navigation
     }
 }
