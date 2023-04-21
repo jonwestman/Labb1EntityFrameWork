@@ -16,7 +16,7 @@ namespace Labb1EntityFrameWork.Models
         [DisplayName("End date")]
         public DateTime EndDate { get; set; }
         [DisplayName("Date of application")]
-        public DateTimeOffset DateApplied { get; set; } = DateTimeOffset.Now;
+        public DateTime DateApplied { get; set; } = DateTime.Now;
         [ForeignKey(nameof(Employees))]
         [DisplayName("Employee")]
         public int FK_EmployeeId { get; set; }
