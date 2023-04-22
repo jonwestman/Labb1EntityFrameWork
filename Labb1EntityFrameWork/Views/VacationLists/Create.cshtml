@@ -23,8 +23,7 @@
                 <span asp-validation-for="EndDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DateApplied" class="control-label"></label>
-                <input asp-for="DateApplied" class="form-control" />
+                <input type="hidden" asp-for="DateApplied" value="@DateTime.Now" class="form-control" />
                 <span asp-validation-for="DateApplied" class="text-danger"></span>
             </div>
             <div class="form-group">

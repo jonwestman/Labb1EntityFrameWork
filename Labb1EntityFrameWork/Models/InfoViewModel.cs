@@ -11,7 +11,7 @@ namespace Labb1EntityFrameWork.Models
         public string VacayType { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public DateTimeOffset DateApplied { get; set; }
+        public DateTime DateApplied { get; set; }
 
     }
 }
