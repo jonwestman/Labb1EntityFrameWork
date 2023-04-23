@@ -26,8 +26,36 @@ namespace Labb1EntityFrameWork.Controllers
             return View(await vacationContext.ToListAsync());
         }
 
-        // GET: VacationLists/Details/5
-        public async Task<IActionResult> Details(int? id)
+		// GET: Vacations/VacationSearch
+		public async Task<IActionResult> VacationSearch()
+		{
+			var vacationContext = _context.VacationLists.Include(v => v.Employees);
+			return View(await vacationContext.ToListAsync());
+		}
+
+		// Post: Vacations/ShowSearchResults
+		public async Task<IActionResult> ShowSearchResults(string VacationSearch)
+		{
+			var vacationContext = _context.VacationLists.Include(v => v.Employees);
+			return View("Index", await vacationContext.Where(v => v.Employees.LastName.Contains(VacationSearch)).ToListAsync());
+		}
+
+		// GET: Vacations/Admin
+		public async Task<IActionResult> Admin()
+		{
+			var vacationContext = _context.VacationLists.Include(v => v.Employees);
+			return View(await vacationContext.ToListAsync());
+		}
+
+		// Post: Vacations/AdminShowResults
+		public async Task<IActionResult> AdminShowResults(DateTime SearchStart, DateTime SearchEnd)
+		{
+			var vacationContext = _context.VacationLists.Include(v => v.Employees);
+			return View("Index", await vacationContext.Where(v => v.DateApplied > SearchStart && v.DateApplied < SearchEnd).ToListAsync());
+		}
+
+		// GET: VacationLists/Details/5
+		public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.VacationLists == null)
             {
