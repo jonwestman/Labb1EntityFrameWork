@@ -8,6 +8,7 @@ namespace Labb1EntityFrameWork.Models
         public string FirstName { get; set; }
         [DisplayName("Last name")]
         public string LastName { get; set; }
+        [DisplayName("Reason for absence")]
         public string VacayType { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
