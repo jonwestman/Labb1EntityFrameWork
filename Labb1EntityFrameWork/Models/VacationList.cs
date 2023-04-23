@@ -24,7 +24,8 @@ namespace Labb1EntityFrameWork.Models
         [ForeignKey(nameof(Vacations))]
         [DisplayName("Reason for abscence")]
         public int FK_VacationId { get; set; }
-        public virtual Vacation? Vacations { get; set; } = default!;
+		[DisplayName("Reason for abscence")]
+		public virtual Vacation? Vacations { get; set; } = default!;
 
 	}
 }
